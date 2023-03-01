@@ -1,7 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@font-face {
+  font-family: "H-Bold";
+  src: url("/fonts/halvar/HalvarBreit-Bd.woff") format("woff");
+}
+
+@font-face {
+  font-family: "H-Black";
+  src: url("/fonts/halvar/HalvarBreit-Blk.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Interface-Regular";
+  src: url("/fonts/interface/TTInterfaces-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Interface-Bold";
+  src: url("/fonts/interface/TTInterfaces-Bold.woff") format("woff");
+}
+
+:root {
+  --black: #000000;
+  --dark-gray: #353437;
+  --white: #ffffff;
+  --purple: #dd0060;
+  --grayscale: #565656;
+  --gray: #ebebeb;
+  --teal: #57cc99;
+  --golos: "Golos Text";
+  --halvar-bold: "H-Bold";
+  --halvar-black: "H-Black";
+  --interface: "Interface-Regular";
+  --interface-bold: "Interface-Bold";
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--golos), sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.box {
+  max-width: calc(1440px + 32px);
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 auto;
+  padding-top: 140px;
+}
+
+.logo {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.chat {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--dark-gray);
+  color: var(--purple);
+  box-shadow: 0px 4px 35px rgba(0, 138, 255, 0.15);
+  z-index: 4;
+}
+
+.chat svg {
+  width: 40px;
+  height: 40px;
+}
+
+.section_title /* h3 */ {
+  font-family: var(--halvar-bold), var(--golos), sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
 }

@@ -1,0 +1,47 @@
+.section {
+  background-color: var(--white);
+}
+
+.section_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.section_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.tab_content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.tab {
+  padding: 8px 24px;
+  border-radius: 500px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #9a999b;
+  border: 1px solid var(--gray);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tab.active {
+  border: 1px solid var(--purple);
+  color: var(--purple);
+}
+
+.products_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}

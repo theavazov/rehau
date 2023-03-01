@@ -1,4 +1,9 @@
+import { MainAboutSection } from "../components/home/about/about";
+import { MainContactsSection } from "../components/home/contacts/contacts";
+import { MainGallerySection } from "../components/home/gallery/gallery";
+import { MainProductsSection } from "../components/home/products/products";
 import { CustomHead } from "../components/utils/head";
+import { Layout } from "../components/utils/layout";
 import { url } from "./_app";
 
 export default function Home() {
@@ -11,7 +16,12 @@ export default function Home() {
         }
         canonical={url}
       />
-      <p>Home</p>
+      <Layout>
+        <MainAboutSection />
+        <MainProductsSection />
+        <MainGallerySection />
+        <MainContactsSection />
+      </Layout>
     </>
   );
 }
