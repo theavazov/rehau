@@ -9,6 +9,12 @@
   border: 1px solid var(--gray);
 }
 
+.card:hover .card_btn {
+  background-color: var(--purple);
+  color: var(--white);
+  transition: 0.3s;
+}
+
 .card_img {
   position: relative;
   width: 100%;
@@ -61,4 +67,5 @@
   padding: 16px;
   background-color: unset;
   border-radius: 12px;
+  transition: 0.3s;
 }
